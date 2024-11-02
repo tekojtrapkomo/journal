@@ -1,5 +1,6 @@
 import { MongoClient } from 'mongodb';
-const MONGODB_URI = 'mongodb+srv://battogtokhportfolio:zzcfYtKvqpX7PsZp@cluster0.jgpty.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; 
+import { MONGODB_URI } from '$env/static/private';
+
 const client = new MongoClient(MONGODB_URI);
 let db;
 
