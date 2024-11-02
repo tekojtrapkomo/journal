@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import { redirect } from '@sveltejs/kit';
 import { PASSWORD_HASH } from '$env/static/private';
 
-const PASSWORD_HASH = PASSWORD_HASH
+const HASH = PASSWORD_HASH
 export async function handle({ event, resolve }) {
     const { cookies, url } = event;
     const isAuthenticated = cookies.get('authenticated') === 'true';
