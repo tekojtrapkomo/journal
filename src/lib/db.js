@@ -1,13 +1,19 @@
-import { MongoClient } from 'mongodb';
+// src/lib/db.js or wherever your DB connection is
 import { MONGODB_URI } from '$env/static/private';
+import { MongoClient } from 'mongodb';
 
-const client = new MongoClient(MONGODB_URI);
-let db;
+let client;
 
 export async function connectToDatabase() {
-    if (!db) {
-        await client.connect();
-        db = client.db('login'); // replace with your database name
+    if (!client) {
+        try {
+            client = await MongoClient.connect(MONGODB_URI);
+            console.log('Connected to MongoDB');
+            return client.db();
+        } catch (error) {
+            console.error('MongoDB Connection Error:', error);
+            throw error;
+        }
     }
-    return db;
+    return client.db();
 }
