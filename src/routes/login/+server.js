@@ -1,12 +1,11 @@
 import bcrypt from 'bcrypt';
 import { connectToDatabase } from '$lib/db';
-import { PASSWORD_HASH } from '$env/static/private';
 
-const HASH = PASSWORD_HASH 
+const PASSWORD_HASH = '$2b$10$WFTaM7eL3ujdR1s40b4nKu.EVGSe/SuvHw6WzI31NJR77a41raenu'; 
 
 export async function POST({ request, cookies }) {
     const { password } = await request.json();
-    const isCorrectPassword = await bcrypt.compare(password, HASH);
+    const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
 
     // Connect to the database and log the attempt
     const db = await connectToDatabase();
