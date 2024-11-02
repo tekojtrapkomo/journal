@@ -8,14 +8,14 @@ export async function POST({ request, cookies }) {
     const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
 
     // Connect to the database and log the attempt
-    const db = await connectToDatabase();
-    const loginAttemptsCollection = db.collection('login_attempts');
+    // const db = await connectToDatabase();
+    // const loginAttemptsCollection = db.collection('login_attempts');
 
-    await loginAttemptsCollection.insertOne({
-        timestamp: new Date(),
-        attempt: password,
-        success: isCorrectPassword
-    });
+    // await loginAttemptsCollection.insertOne({
+    //     timestamp: new Date(),
+    //     attempt: password,
+    //     success: isCorrectPassword
+    // });
 
     if (isCorrectPassword) {
         cookies.set('authenticated', 'true', { path: '/', httpOnly: true, maxAge: 200 });
