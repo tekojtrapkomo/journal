@@ -4,13 +4,13 @@
         { day: "october 21", href: "/october-21", active: false },
         { day: "october 22", href: "/october-22", active: false },
         { day: "october 23", href: "/october-23", active: false },
-        { day: "october 26", href: "/october-26", active: false },
+        { day: "october 24", href: "/october-24", active: false },
         { day: "october 27", href: "/october-27", active: false },
         { day: "october 28", href: "/october-28", active: false },
         { day: "october 29", href: "/october-29", active: false },
         { day: "october 30", href: "/october-30", active: false },
         { day: "october 31", href: "/october-31", active: true }, // Active date
-        { day: "november 1", href: "/november-1", active: false },
+        { day: "november 1", href: "https://www.youtube.com/watch?v=JrFwPOElh0s", active: false },
         { day: "november 2", href: "/november-2", active: false }
     ];
 

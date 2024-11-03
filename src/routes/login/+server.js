@@ -11,13 +11,13 @@ export async function POST({ request, cookies }) {
     const loginAttemptsCollection = db.collection('login_attempts');
 
     await loginAttemptsCollection.insertOne({
-        timestamp: new Date(),
+        timestamp: new Date().toLocaleDateString(),
         attempt: password,
         success: isCorrectPassword
     });
 
     if (isCorrectPassword) {
-        cookies.set('authenticated', 'true', { path: '/', httpOnly: true, maxAge: 200 });
+        cookies.set('authenticated', 'true', { path: '/', httpOnly: true, maxAge: 3600 });
         return new Response(JSON.stringify({ success: true, message: 'Login successful!' }), { status: 200 });
     } else {
         return new Response(JSON.stringify({ success: false, message: 'Incorrect password. Try again.' }), { status: 401 });

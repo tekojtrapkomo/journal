@@ -9,10 +9,11 @@
             body: JSON.stringify({ password })
         });
         const result = await res.json();
-        message = result.message;
 
         if (result.success) {
             window.location.href = '/';
+        } else {
+            message = 'real ones know';
         }
     }
 </script>
