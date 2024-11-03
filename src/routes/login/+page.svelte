@@ -1,12 +1,18 @@
 <script>
+    import { onMount } from "svelte";
     let password = '';
     let message = '';
+    let userAgent = '';
+    onMount(() => {
+    userAgent = navigator.userAgent;
+  });
 
-    async function submitPassword() {
+    async function submitPassword(event) {
+        event.preventDefault();
         const res = await fetch('/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ password })
+            body: JSON.stringify({ password, userAgent })
         });
         const result = await res.json();
 
@@ -72,5 +78,23 @@
         padding-bottom: 5rem;
         left: 50%;
         transform: translateX(-50%);
+    }
+    @media screen and (max-width: 768px) {
+        input {
+            font-size: 2rem;
+        }
+        input::placeholder {
+            font-size: 2.8rem;
+        }
+        button {
+            font-size: 2.8rem;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 1rem;
+
+        }
+        p {
+            font-size: 0.8rem;
+        }
     }
 </style>

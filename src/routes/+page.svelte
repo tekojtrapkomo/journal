@@ -11,7 +11,8 @@
         { day: "october 30", href: "/october-30", active: false },
         { day: "october 31", href: "/october-31", active: true }, // Active date
         { day: "november 1", href: "https://www.youtube.com/watch?v=JrFwPOElh0s", active: false },
-        { day: "november 2", href: "/november-2", active: false }
+        { day: "november 2", href: "/november-2", active: false },
+        { day: "november 3", href: "/november-3", active: false},
     ];
 
         // Calculate items per column
@@ -21,7 +22,6 @@
     const column1 = dates.slice(0, itemsPerColumn);
     const column2 = dates.slice(itemsPerColumn, itemsPerColumn * 2);
     const column3 = dates.slice(itemsPerColumn * 2);
-  
     
   </script>
   
@@ -61,90 +61,137 @@
     </div>
   </div>
   <style>
-    /* Container */
-    .wrapper {
-        width: 100vw;
-    padding: 2rem;
-    min-height: 100vh; /* Make wrapper full height */
+.wrapper {
+    width: 100%;
+    padding: 1rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    }
-  
-    /* Header */
-    .header {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding-bottom: 1em;
-    }
-  .left{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* Adjust value as needed */
-    user-select: none;
+    overflow-x: hidden;
+}
 
-  }
-  
-  
-    .right {
-  text-align: right;
-  position: relative;
-  user-select: none;
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1em;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    user-select: none;
+    width: 60%;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right {
+    text-align: right;
+    position: relative;
+    user-select: none;
+    width: 35%;
 }
 
 .right-img {
-  position: relative; /* Add positioning context */
-  z-index: 2; /* Ensure it is above the halo */
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
 }
 
 .halo {
-  position: absolute;
-  top: -1em;
-  right: -1em;
-  width: 100%;
-  z-index: 1; /* Ensure it is below the right-img */
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    width: 100%;
+    z-index: 1;
 }
+
 .dates-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    gap: 0;
-    margin-top: auto; /* This will push the grid to the bottom */
-    margin-bottom: 3rem; /* Add some space from bottom */
-    }
+    gap: 0.5rem;
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
 
-    .date-column {
-        display: flex;
+.date-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.date-column:nth-child(2) {
+    margin: 0 auto;
+}
+
+.date-column:nth-child(3) {
+    margin-left: auto;
+}
+
+.date-link {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    color: blue;
+    text-decoration: underline;
+    text-align: left;
+    white-space: nowrap;
+    font-family: 'reg', sans-serif;
+    letter-spacing: -1px;
+}
+
+.active {
+    color: #ff0066;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
         flex-direction: column;
-        gap: 0.5rem;
-        /* Add specific widths to each column to control alignment */
-        width: fit-content;
+        gap: 2rem;
+        padding-bottom: 2rem;
     }
 
-        /* Center column */
-        .date-column:nth-child(2) {
+    .left {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-img {
+        width: 90%;
         margin: 0 auto;
     }
 
-    /* Right column */
-    .date-column:nth-child(3) {
-        margin-left: auto;
+    .halo {
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
     }
 
     .date-link {
-        font-size: 4rem;
-        color: blue;
-        text-decoration: underline; /* Underline all dates */
-        text-align: left;
-        white-space: nowrap;
-        font-family: 'reg', sans-serif;
-        letter-spacing: -3px;
+        font-size: 1.25rem;
+        letter-spacing: -0.5px;
     }
-  
-    .active {
-        color: #ff0066; /* Pink color for active date */
+    
+    .dates-grid {
+        gap: 0.25rem;
+        margin-bottom: 2rem;
     }
-
-
+    
+    .date-column {
+        gap: 0.5rem;
+    }
+}
   </style>

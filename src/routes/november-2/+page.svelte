@@ -41,80 +41,107 @@
     </div>
 </div>
 <style>
-    /* Container */
-    .poem {
-        font-size: 1rem;
-        font-family: 'Times New Roman', serif;
-        font-style: italic;
-        color: black;
-        margin-top: 1rem;
-        background-color: #f9f9f9;
-    }
-    .separator {
-        margin-top: 2rem;
-    }
+/* Container */
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1em;
+    font-family: 'reg', sans-serif;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    flex-direction: column;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4rem;
+}
+
+.right img,
+.right iframe {
+    width: 100%;
+    max-width: 600px;
+}
+
+.content {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1em;
+    font-family: 'reg', sans-serif;
+    letter-spacing: -4px;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 4rem;
+}
+
+.menu p {
+    font-size: 4rem;
+    color: blue;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
     .main {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding-bottom: 1em;
-        font-family: 'reg', sans-serif;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .left {
-        width: 50%;
-        display: flex;
-        justify-content: flex-start;
-        padding: 0 2rem;
-        flex-direction: column;
-    }
-    
+    .left, 
     .right {
-        width: 50%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 2rem;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 4rem;
-    }
-
-    .right img {
         width: 100%;
         max-width: 600px;
-    }
-    .content {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-top: 1rem;
-    }
-    blockquote {
-        font-size: 1.5rem;
-        line-height: 1.5;
-        font-family: 'Times New Roman', serif;
-        color: black;
-    }
-    .menu {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
+        padding: 0 1rem;
         align-items: flex-start;
-        padding-bottom: 1em;
-        font-family: 'reg', sans-serif;
-        letter-spacing: -4px;
-        padding: 0 2rem 2rem 2rem;
     }
 
-    .menu a {
-        text-decoration: none;
-        color: black;
-        font-size: 4rem;
+    .right {
+        margin-top: 2rem;
     }
 
+    .right img,
+    .right iframe {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu {
+        padding: 0 1rem 1rem 1rem;
+        
+    }
+
+    .menu a,
     .menu p {
-        font-size: 4rem;
-        color: blue;
+        font-size: 2rem;
+        letter-spacing: -3px;
     }
 
+    .content {
+        font-size: 16px;
+        max-width: 600px;
+    }
+}
 </style>

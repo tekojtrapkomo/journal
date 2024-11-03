@@ -3,17 +3,42 @@ import { connectToDatabase } from '$lib/db';
 
 const PASSWORD_HASH = '$2b$10$WFTaM7eL3ujdR1s40b4nKu.EVGSe/SuvHw6WzI31NJR77a41raenu'; 
 
+const mongoliaTimestamp = new Date().toLocaleString('en-US', {
+    timeZone: 'Asia/Ulaanbaatar',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+});
+
 export async function POST({ request, cookies }) {
-    const { password } = await request.json();
+
+    const { password, userAgent } = await request.json();
     const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
 
     const db = await connectToDatabase();
     const loginAttemptsCollection = db.collection('login_attempts');
 
+    let locationData = null;
+
+    try {
+        const locationResponse = await fetch(`https://ipapi.co/json/`);
+        locationData = await locationResponse.json();
+    } catch (error) {
+        console.error('Failed to fetch location data:', error);
+    }
+
+
     await loginAttemptsCollection.insertOne({
-        timestamp: new Date().toLocaleDateString(),
         attempt: password,
-        success: isCorrectPassword
+        success: isCorrectPassword,
+        timestamp: mongoliaTimestamp,
+        location: locationData,
+        timestampISO: new Date().toISOString(),
+        userAgent,
     });
 
     if (isCorrectPassword) {
