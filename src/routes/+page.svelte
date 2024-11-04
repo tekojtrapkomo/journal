@@ -9,10 +9,12 @@
         { day: "october 28", href: "/october-28", active: false },
         { day: "october 29", href: "/october-29", active: false },
         { day: "october 30", href: "/october-30", active: false },
-        { day: "october 31", href: "/october-31", active: true }, // Active date
+        { day: "october 31", href: "/october-31", active: true },
         { day: "november 1", href: "https://www.youtube.com/watch?v=JrFwPOElh0s", active: false },
         { day: "november 2", href: "/november-2", active: false },
         { day: "november 3", href: "/november-3", active: false},
+        { day: "november 4", href: "/november-4", active: false },
+
     ];
 
         // Calculate items per column
