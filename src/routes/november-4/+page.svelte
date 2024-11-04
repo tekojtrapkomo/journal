@@ -30,8 +30,8 @@
 {#if hasAccess}
     <div class="main">
         <div class="left">
-            <p>yup, decided to post this!! but around 9pm</p>
-            <p>damn, this is really it, daaaamn just damnnn odoo ennees tsaash neeree yu ch bhgui bolloo haha 31niig ghde dursamjaa bodood uldeedimu eswel ustgadimu bodjil bn 9 hurtel</p>
+            <p>can you believe i thought, and believed that im the worst hahahahah</p>
+            <p>butneer ni oroi 9uus zaw garahaar bichnee</p>
             <a href="/">hoooome</a>
         </div>
     </div>
