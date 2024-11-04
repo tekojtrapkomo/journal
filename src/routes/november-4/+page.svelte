@@ -30,8 +30,13 @@
 {#if hasAccess}
     <div class="main">
         <div class="left">
-            <p>can you believe i thought, and believed that im the worst hahahahah</p>
+            <p>can you believe that i thought, and really believed, made myself convinced that i'm the worst hahahahah</p>
+            
+            <br>
             <p>butneer ni oroi 9uus zaw garahaar bichnee</p>
+            <img src="https://3.bp.blogspot.com/-ZsFo_thGv5M/Uc0EghCht5I/AAAAAAAAHy0/TO6rqFWUVBw/s600/IBM-Bionic-Body-Armor-Dodges-Bullets-2.jpg" alt="">
+            <br>
+            <p>call me war veteran, the way my soul dodged that ballistic warhead missile</p>
             <a href="/">hoooome</a>
         </div>
     </div>
@@ -187,7 +192,13 @@
         height: 100vh;
         font-family: 'reg', sans-serif;
     }
-
+    .left {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     .left a {
         font-size: 4rem;
         color: blue;
