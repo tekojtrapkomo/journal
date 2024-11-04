@@ -30,16 +30,8 @@
 {#if hasAccess}
     <div class="main">
         <div class="left">
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/u3ii4BpNVbs?si=-akb6akt1Rlfmdae" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-            ></iframe>
+            <p>yup, decided to post this!! but around 9pm</p>
+            <a href="/">hoooome</a>
         </div>
     </div>
 {:else}
@@ -192,12 +184,13 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: black;
+        font-family: 'reg', sans-serif;
     }
 
-    .left iframe {
-        width: 100vw;
-        height: 100vh;
+    .left a {
+        font-size: 4rem;
+        color: blue;
+        text-decoration: none;
     }
 
     @media screen and (max-width: 1024px) {
