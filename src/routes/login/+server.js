@@ -20,15 +20,14 @@ export async function POST({ request, cookies }) {
     const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
 
     const db = await connectToDatabase();
-    const loginAttemptsCollection = db.collection('login_attempts');
+    const loginAttemptsCollection = db.collection('login_attempts_nov_4');
 
     let locationData = null;
 
     try {
-        const locationResponse = await fetch(`https://ipapi.co/json/`);
+        const locationResponse = await fetch(`https://ipinfo.io/json?token=a5c5c1b284088f`);
         locationData = await locationResponse.json();
-    } catch (error) {
-        console.error('Failed to fetch location data:', error);
+    } catch {
     }
 
 
