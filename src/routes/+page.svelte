@@ -120,6 +120,7 @@
     gap: 0.5rem;
     margin-top: auto;
     margin-bottom: 2rem;
+    z-index: 999;
 }
 
 .date-column {

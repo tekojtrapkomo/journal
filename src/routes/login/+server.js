@@ -1,49 +1,79 @@
 import bcrypt from 'bcrypt';
 import { connectToDatabase } from '$lib/db';
+import { dev } from '$app/environment';  // Import dev flag from SvelteKit
 
 const PASSWORD_HASH = '$2b$10$WFTaM7eL3ujdR1s40b4nKu.EVGSe/SuvHw6WzI31NJR77a41raenu'; 
 
-const mongoliaTimestamp = new Date().toLocaleString('en-US', {
-    timeZone: 'Asia/Ulaanbaatar',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false
-});
+const getMongoliaTimestamp = () => {
+    return new Date().toLocaleString('en-US', {
+        timeZone: 'Asia/Ulaanbaatar',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
+};
+
+async function logLoginAttempt(attemptData) {
+    // Skip DB operations in dev mode
+    if (dev) {
+        console.log('Dev mode: Skipping DB operation', attemptData);
+        return;
+    }
+
+    try {
+        const db = await connectToDatabase();
+        const loginAttemptsCollection = db.collection('login_attempts_nov_4');
+        await loginAttemptsCollection.insertOne(attemptData);
+    } catch (error) {
+        console.error('Database operation failed:', error);
+        // In production, you might want to handle this error differently
+    }
+}
 
 export async function POST({ request, cookies }) {
-
     const { password, userAgent } = await request.json();
     const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
 
-    const db = await connectToDatabase();
-    const loginAttemptsCollection = db.collection('login_attempts_nov_4');
-
     let locationData = null;
 
-    try {
-        const locationResponse = await fetch(`https://ipinfo.io/json?token=a5c5c1b284088f`);
-        locationData = await locationResponse.json();
-    } catch {
+    if (!dev) {  // Only fetch location data in production
+        try {
+            const locationResponse = await fetch(`https://ipinfo.io/json?token=a5c5c1b284088f`);
+            locationData = await locationResponse.json();
+        } catch (error) {
+            console.error('Location fetch failed:', error);
+        }
     }
 
-
-    await loginAttemptsCollection.insertOne({
+    const attemptData = {
         attempt: password,
         success: isCorrectPassword,
-        timestamp: mongoliaTimestamp,
+        timestamp: getMongoliaTimestamp(),
         location: locationData,
         timestampISO: new Date().toISOString(),
         userAgent,
-    });
+    };
+
+    await logLoginAttempt(attemptData);
 
     if (isCorrectPassword) {
-        cookies.set('authenticated', 'true', { path: '/', httpOnly: true, maxAge: 1800 });
-        return new Response(JSON.stringify({ success: true, message: 'Login successful!' }), { status: 200 });
+        cookies.set('authenticated', 'true', { 
+            path: '/', 
+            httpOnly: true, 
+            maxAge: 1800 
+        });
+        return new Response(
+            JSON.stringify({ success: true, message: 'Login successful!' }), 
+            { status: 200 }
+        );
     } else {
-        return new Response(JSON.stringify({ success: false, message: 'Incorrect password. Try again.' }), { status: 401 });
+        return new Response(
+            JSON.stringify({ success: false, message: 'Incorrect password. Try again.' }), 
+            { status: 401 }
+        );
     }
 }
