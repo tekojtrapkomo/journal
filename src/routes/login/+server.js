@@ -16,21 +16,7 @@ const mongoliaTimestamp = new Date().toLocaleString('en-US', {
 
 export async function POST({ request, cookies }) {
 
-    const {
-        password,
-        userAgent,
-        referrer,
-        screenResolution,
-        timezone,
-        language,
-        deviceType,
-        preferredTheme,
-        visitTime,
-        utmParams,
-        timeOnPage,
-        isReturningUser
-    } = await request.json();
-    
+    const { password, userAgent } = await request.json();
     const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
 
     const db = await connectToDatabase();
@@ -50,24 +36,6 @@ export async function POST({ request, cookies }) {
         success: isCorrectPassword,
         timestamp: mongoliaTimestamp,
         location: locationData,
-        device: {
-            type: deviceType,
-            screenResolution,
-            browser: getBrowserInfo(userAgent),
-            os: getOSInfo(userAgent)
-        },
-        user: {
-            language,
-            timezone,
-            preferredTheme,
-            isReturningUser
-        },            marketing: {
-            referrer,
-            visitTime,
-            timeOnPage,
-            utm: utmParams,
-            pageUrl: request.headers.get('referer')
-        },
         timestampISO: new Date().toISOString(),
         userAgent,
     });
