@@ -31,6 +31,7 @@
     <div class="main">
         <div class="left">
             <p>yup, decided to post this!! but around 9pm</p>
+            <p>damn, this is really it, daaaamn just no words</p>
             <a href="/">hoooome</a>
         </div>
     </div>
