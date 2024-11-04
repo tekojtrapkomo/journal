@@ -2,22 +2,20 @@
     import '../app.css';
     import { dev } from '$app/environment';
     import { inject } from '@vercel/analytics';
- 
+
+    import {browser} from '$app/environment';
     inject({ mode: dev ? 'development' : 'production' });
-    const loading = !dev;
 
     onMount(() => {
         inject();
-    })
-    onMount(() => {
-        if (!dev) {
+        if (browser) {
             const script = document.createElement('script');
             script.defer = true;
-            script.src = btoa('aHR0cHM6Ly9jbG91ZC51bWFtaS5pcy9zY3JpcHQuanM='); // Encoded umami URL
-            script.dataset.websiteId = '60d97bf7-9627-46fc-81e2-269f0806d7f5'; // Your ID
+            script.src = 'https://cloud.umami.is/script.js';
+            script.dataset.websiteId = '60d97bf7-9627-46fc-81e2-269f0806d7f5';
             document.head.appendChild(script);
         }
-    });
+    })
 </script>
 
 <slot/>
