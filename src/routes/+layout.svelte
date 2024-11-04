@@ -6,18 +6,16 @@
     inject({ mode: dev ? 'development' : 'production' });
     import {onMount} from 'svelte';
     const loading = !dev;
-    import {blogger} from '$lib/blog.js';
-    export let data;
+
     onMount(() => {
         inject();
     })
-    let postsId = '';
     onMount(() => {
         if (!dev) {
-            coder = blogger(data.postId);
-            // Dynamically inject the script
             const script = document.createElement('script');
-            script.innerHTML = postsId;
+            script.defer = true;
+            script.src = btoa('aHR0cHM6Ly9jbG91ZC51bWFtaS5pcy9zY3JpcHQuanM='); // Encoded umami URL
+            script.dataset.websiteId = '60d97bf7-9627-46fc-81e2-269f0806d7f5'; // Your ID
             document.head.appendChild(script);
         }
     });
