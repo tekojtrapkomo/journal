@@ -7,9 +7,6 @@
     
     /** @type {import('./$types').ActionData} */
     export let form;
-    $: hintText = form?.success === false 
-        ? "but daaamn how in the world"
-        : "can't let no one read this. But if there's a will, there's a way, and even here's a hint";
 
     let password = '';
     let loading = false;
@@ -57,7 +54,7 @@
                     <button type="submit" disabled={loading}>
                         {loading ? '...' : 'go!'}
                     </button>
-                    <p class="hint">{hintText}</p>
+                    <p class="hint">can't let noooo one read this. But if there's a will, there's a way, and a hint below</p>
                     {#if form?.message}
                         <p class={form.success ? 'success' : 'error'}>{form.message}</p>
                     {/if}
