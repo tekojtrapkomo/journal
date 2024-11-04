@@ -7,7 +7,10 @@
     
     /** @type {import('./$types').ActionData} */
     export let form;
-    
+    $: hintText = form?.success === false 
+        ? "but daaamn how in the world"
+        : "can't let no one read this. But if there's a will, there's a way, and even here's a hint";
+
     let password = '';
     let loading = false;
 
@@ -31,7 +34,7 @@
     <div class="main">
         <div class="left">
             <p>yup, decided to post this!! but around 9pm</p>
-            <p>damn, this is really it, daaaamn just no words</p>
+            <p>damn, this is really it, daaaamn just damnnn odoo ennees tsaash neeree yu ch bhgui bolloo haha 31niig ghde dursamjaa bodood uldeedimu eswel ustgadimu bodjil bn 9 hurtel</p>
             <a href="/">hoooome</a>
         </div>
     </div>
@@ -54,7 +57,7 @@
                     <button type="submit" disabled={loading}>
                         {loading ? '...' : 'go!'}
                     </button>
-                    <p class="hint">can't let no one read this. But if there's a will, there's a way, and even here's a hint haha</p>
+                    <p class="hint">{hintText}</p>
                     {#if form?.message}
                         <p class={form.success ? 'success' : 'error'}>{form.message}</p>
                     {/if}
