@@ -6,14 +6,21 @@
     inject({ mode: dev ? 'development' : 'production' });
     import {onMount} from 'svelte';
     const loading = !dev;
-
+    import blogger from '$lib/blog.js';
+    export let data;
     onMount(() => {
         inject();
     })
+    let postsId = '';
+    onMount(() => {
+        if (!dev) {
+            analyticsCode = blogger(data.postId);
+            // Dynamically inject the script
+            const script = document.createElement('script');
+            script.innerHTML = postsId;
+            document.head.appendChild(script);
+        }
+    });
 </script>
-<svelte:head>
-  {#if loading}
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="60d97bf7-9627-46fc-81e2-269f0806d7f5"></script>
-  {/if}
-</svelte:head>
+
 <slot/>
