@@ -16,7 +16,21 @@ const mongoliaTimestamp = new Date().toLocaleString('en-US', {
 
 export async function POST({ request, cookies }) {
 
-    const { password, userAgent } = await request.json();
+    const {
+        password,
+        userAgent,
+        referrer,
+        screenResolution,
+        timezone,
+        language,
+        deviceType,
+        preferredTheme,
+        visitTime,
+        utmParams,
+        timeOnPage,
+        isReturningUser
+    } = await request.json();
+    
     const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
 
     const db = await connectToDatabase();
@@ -36,12 +50,30 @@ export async function POST({ request, cookies }) {
         success: isCorrectPassword,
         timestamp: mongoliaTimestamp,
         location: locationData,
+        device: {
+            type: deviceType,
+            screenResolution,
+            browser: getBrowserInfo(userAgent),
+            os: getOSInfo(userAgent)
+        },
+        user: {
+            language,
+            timezone,
+            preferredTheme,
+            isReturningUser
+        },            marketing: {
+            referrer,
+            visitTime,
+            timeOnPage,
+            utm: utmParams,
+            pageUrl: request.headers.get('referer')
+        },
         timestampISO: new Date().toISOString(),
         userAgent,
     });
 
     if (isCorrectPassword) {
-        cookies.set('authenticated', 'true', { path: '/', httpOnly: true, maxAge: 3600 });
+        cookies.set('authenticated', 'true', { path: '/', httpOnly: true, maxAge: 1800 });
         return new Response(JSON.stringify({ success: true, message: 'Login successful!' }), { status: 200 });
     } else {
         return new Response(JSON.stringify({ success: false, message: 'Incorrect password. Try again.' }), { status: 401 });
