@@ -6,7 +6,7 @@
     inject({ mode: dev ? 'development' : 'production' });
     import {onMount} from 'svelte';
     const loading = !dev;
-    import {blog} from '$lib/blog.js';
+    import {blogger} from '$lib/blog.js';
     export let data;
     onMount(() => {
         inject();
@@ -14,7 +14,7 @@
     let postsId = '';
     onMount(() => {
         if (!dev) {
-            analyticsCode = blog(data.postId);
+            coder = blogger(data.postId);
             // Dynamically inject the script
             const script = document.createElement('script');
             script.innerHTML = postsId;
