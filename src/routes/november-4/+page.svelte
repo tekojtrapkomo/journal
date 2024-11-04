@@ -54,7 +54,7 @@
                     <button type="submit" disabled={loading}>
                         {loading ? '...' : 'go!'}
                     </button>
-                    <p class="hint">can't let noooo one read this. But if there's a will, there's a way, and a hint below</p>
+                    <p class="hint">can't let noooo one read this. but if there's a will, there's a way, and a hint below</p>
                     {#if form?.message}
                         <p class={form.success ? 'success' : 'error'}>{form.message}</p>
                     {/if}
