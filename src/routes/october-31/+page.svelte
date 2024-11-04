@@ -234,7 +234,7 @@
 <div class="error-container">
     <a href="/">
         <img src="/shooo.png" alt="404">
-        <p>or no post added yet</p>
+        <p>no post added yet</p>
     </a>
 </div>
 
