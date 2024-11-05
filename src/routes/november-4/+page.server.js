@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import { connectToDatabase } from '$lib/db';
 import { dev } from '$app/environment';
 
-const NOV4_PASSWORD_HASH = '$2b$10$yZxx6vSPp/cMLVaOTQDYmeEONHKlCdKlJY9KeT2h7XjACGiHQ3I96';
+const NOV4_PASSWORD_HASH = '$2b$10$GzYnQKQfvC1J3j2yPF4ArexPCJWEpurxVmJldrDqvctbwHJfwlW4K';
 
 const getMongoliaTimestamp = () => {
     return new Date().toLocaleString('en-US', {
