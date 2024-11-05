@@ -108,8 +108,9 @@
                     </div>
         
             <div class="right">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEcqHA7dbwM?si=rc1PVl_qGYzoKeOa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
-        </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEcqHA7dbwM?si=rc1PVl_qGYzoKeOa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                            <p><i>Why fancy clown? Cause i'm having a really bad issues with jealousy lately, and since it's so sensitive information, humuusiig tuurugduuleh geed bas, but you know it's gotta be you!!</i></p>
+            </div>
+            </div>
     </div>
 {:else}
     <div class="container">
