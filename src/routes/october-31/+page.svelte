@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
     import oct30_1 from '$lib/assets/oct30_1.jpeg';
     import oct29_33 from '$lib/assets/oct29_33.jpeg';
     import lovers from '$lib/assets/lovers.jpeg';
@@ -228,37 +228,4 @@
         max-width: 600px;
     }
 }
-</style> -->
-
-
-<div class="error-container">
-    <a href="/">
-        <img src="/shooo.png" alt="404">
-        <p>no post added yet</p>
-    </a>
-</div>
-
-<style>
-    .error-container {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    img {
-        width: 100%;
-        max-width: 800px;
-    }
-    p {
-        font-size: 1.5rem;
-        margin-top: 1rem;
-        font-family: 'reg',sans-serif;
-        letter-spacing: -0.5px;
-    }
-    a {
-        text-decoration: none;
-        color: inherit;
-        text-align: center;
-    }
 </style>
