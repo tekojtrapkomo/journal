@@ -39,7 +39,6 @@
       </div>
     </div>
     <div class="dates-grid">
-        <p>YALL ILL BE BACK WITH NOV 5, NOV 6 </p>
         <div class="date-column">
             {#each column1 as { day, href, active }}
                 <a {href} class="date-link {active ? 'active' : ''}">
@@ -63,6 +62,7 @@
         </div>
     </div>
   </div>
+  <p class="pp">saving nov 5, nov 6 for a very special day y'all!!</p>
   <style>
 .wrapper {
     width: 100%;
@@ -154,12 +154,22 @@
 .active {
     color: #ff0066;
 }
+.pp {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'bold', sans-serif;
+    letter-spacing: -1px;
+}
 
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
         gap: 2rem;
         padding-bottom: 2rem;
+    }
+    .pp {
+        font-size: 1rem;
     }
 
     .left {
