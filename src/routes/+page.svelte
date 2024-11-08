@@ -14,6 +14,8 @@
         { day: "november 2", href: "/november-2", active: false },
         { day: "november 3", href: "/november-3", active: false},
         { day: "november 4", href: "/november-4", active: false },
+        { day: "november 5", href: "/november-5", active: false },
+
 
     ];
 
