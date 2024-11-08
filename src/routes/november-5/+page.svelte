@@ -23,7 +23,7 @@
 
     <div class="right">
         <Audio src={thursdayDemo} title="11-07demo" />
-        <p><i>wanted to see if i still got that bounce :P</i></p>
+        <p><i>wanted to see if i still got that bounce :P 04:02pm bhaaa</i></p>
     </div>
 </div>
 <style>
