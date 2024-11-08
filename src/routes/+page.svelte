@@ -15,8 +15,6 @@
         { day: "november 3", href: "/november-3", active: false},
         { day: "november 4", href: "/november-4", active: false },
         { day: "november 7", href: "/november-7", active: false },
-
-
     ];
 
         // Calculate items per column
@@ -41,6 +39,7 @@
       </div>
     </div>
     <div class="dates-grid">
+        <p>YALL ILL BE BACK WITH NOV 5, NOV 6 </p>
         <div class="date-column">
             {#each column1 as { day, href, active }}
                 <a {href} class="date-link {active ? 'active' : ''}">
@@ -199,4 +198,6 @@
         gap: 0.5rem;
     }
 }
+
   </style>
+  
