@@ -5,7 +5,7 @@
 
 <div class="menu">
     <a href="/">go back</a>
-    <p>november 3, 5:39pm est</p>
+    <p>november 3, 7:49pm est</p>
 </div>
 <div class="main">
     <div class="left">
@@ -14,7 +14,7 @@
             But damn, isn't it actually so beautiful? Right now I want to be able to fully feel this pain, and the more I'm feeling it, the more I'm building disgust toward the actions I did before, toward the actions. and that's the beauty of it.
                                 </div>
                                 <div class="content">
-                                    Khaliunaa bi chamd zunduu hairtai shuu, you won't imagine, and sooon i'll be able to express all of this fully. i just need 1-2 weeks to clear this communication chakra, so i can speak and act in harmony with my heart. and many other things as well. future is soo bright and warm for us. gehdee 1-2 doloo honog bhguu bolno esul uuruuur gejgam bishshuuu!!! yaag odoo bga shigee l hoyulaa ywj bgd, zugeer odoo bgagaas uurchlughud gsii
+                                    Khaliunaa bi chamd zunduu hairtai shuu, you won't imagine, and sooon i'll be able to express all of this fully. i just need 1-2 weeks to clear this communication chakra, so i can speak and act in harmony with my heart. and many other things as well. future is soo bright and warm for us. gehdee 1-2 doloo honog bhguu bolno esul uuruuur gejgam bishshuuu!!! yaag odoo bga shigee l hoyulaa ywj bgd, zugeer odoo bgagaas uurchlughud gsii, say bas aimr amgalan taivan bysalgal hiileee yag neg yanzaar l hoinoos jn tevercheed bhiin ajlaa hj bhd chn :P
                                 </div>
                                 <div style="font-size: 8px;" class="content">
                                     p.s - bi bas l buruu yrisan j bj magadgu ghde chi mni yg yu geh gesenbeee gdgiig oilgdim jn
