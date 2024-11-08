@@ -10,7 +10,7 @@
 <div class="main">
     <div class="left">
         <div class="content">
-            bi uuruu iim aimr hetsuu bolj baij yagaad bi mnii hairtai hund iim hetsuu bga gej bodoj bgagum bol? Gehdee ingej mederch bj l hun oilgodog bh.  Zovlon uzsen hun l zovlong oilgodog gej uneheer unen yumaa. Er ni empathytei hun gej uvduj uzsen zovj uzsen l huniig heldeg yum bndaa, but isn't it so beautiful?
+            bi uuruu iim aimr hetsuu bolj baij yagaad bi mnii hairtai hund iim hetsuu bga gej bodoj bgagum bol? Gehdee ingej mederch bj l hun oilgodog bh.  Yum uzsen hun l yumiig oilgodog gej uneheer unen yumaa. Er ni empathytei hun gej uvduj uzsen zovj uzsen l huniig heldeg yum bndaa, but isn't it so beautiful?
             But damn, isn't it actually so beautiful? Right now I want to be able to fully feel this pain, and the more I'm feeling it, the more I'm building disgust toward the actions I did before, toward the actions. and that's the beauty of it.
                                 </div>
                                 <div class="content">

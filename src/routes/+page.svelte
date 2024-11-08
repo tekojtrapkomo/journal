@@ -10,11 +10,13 @@
         { day: "october 29", href: "/october-29", active: false },
         { day: "october 30", href: "/october-30", active: false },
         { day: "october 31", href: "/october-31", active: true },
-        { day: "november 1", href: "https://www.youtube.com/watch?v=JrFwPOElh0s", active: false },
+        // { day: "november 1", href: "https://www.youtube.com/watch?v=JrFwPOElh0s", active: false },
         { day: "november 2", href: "/november-2", active: false },
         { day: "november 3", href: "/november-3", active: false},
         { day: "november 4", href: "/november-4", active: false },
         { day: "november 7", href: "/november-7", active: false },
+        { day: "november 8", href: "/november-8", active: false, egshkh: true },
+
     ];
 
         // Calculate items per column
@@ -40,23 +42,23 @@
     </div>
     <div class="dates-grid">
         <div class="date-column">
-            {#each column1 as { day, href, active }}
-                <a {href} class="date-link {active ? 'active' : ''}">
-                    {day}
+            {#each column1 as { day, href, active, egshkh }}
+            <a {href} class:date-link={true} class:active={active} class:egshkh={egshkh}>
+                {day}
                 </a>
             {/each}
         </div>
         <div class="date-column">
-            {#each column2 as { day, href, active }}
-                <a {href} class="date-link {active ? 'active' : ''}">
-                    {day}
+            {#each column2 as { day, href, active, egshkh }}
+            <a {href} class:date-link={true} class:active={active} class:egshkh={egshkh}>
+                {day}
                 </a>
             {/each}
         </div>
         <div class="date-column">
-            {#each column3 as { day, href, active }}
-                <a {href} class="date-link {active ? 'active' : ''}">
-                    {day}
+            {#each column3 as { day, href, active, egshkh }}
+            <a {href} class:date-link={true} class:active={active} class:egshkh={egshkh}>
+                {day}
                 </a>
             {/each}
         </div>
@@ -140,7 +142,8 @@
 .date-column:nth-child(3) {
     margin-left: auto;
 }
-
+.egshkh {
+color: #feb47b !important;}
 .date-link {
     font-size: clamp(1.5rem, 5vw, 4rem);
     color: blue;
