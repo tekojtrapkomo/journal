@@ -5,7 +5,7 @@
 
 <div class="menu">
     <a href="/">go back</a>
-    <p>november 3, 7:49pm est</p>
+    <p>november 7, 7:49pm est</p>
 </div>
 <div class="main">
     <div class="left">
