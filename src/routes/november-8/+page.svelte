@@ -26,7 +26,7 @@
         </div>
         <div class="content">
             Hamgiin suuld ni, mash unetei zuvluguunuud ugsund bayrlalaa, bi bugdiig ni temdegleed awtsan bgaa bas bugdiig ni daganaa, bas hezee ch ungursun aldaagaa dawtaj dawtahguee neeree shuu amlaj baina. Chi bas shine humuustei neelttei baina shuu, gehdee uuriinhuuruu turuun helsen shg.
-            Bas chinii zuv yum baina, social media deer nzuud bhaar yaltchgui l bolohgui yum bnaa.
+            Bas turuun yrisan shgee, social media, soundcloud deer nzuud bhaar yaltchgui l bolohgui yum bnaa.
         </div>
         <div class="content">
             <i>Ungursun buh jiluuded mash ih bayrlalaa. Yrisan shgee urgelj bie biedee saihniig l huseed ywnaa. Bayrtai Egshigleen</i>🤗
