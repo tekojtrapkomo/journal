@@ -16,7 +16,7 @@
         { day: "november 4", href: "/november-4", active: false },
         { day: "november 7", href: "/november-7", active: false },
         { day: "november 8", href: "/november-8", active: false, egshkh: true },
-        { day: "november 10", href: "/https://www.youtube.com/watch?v=hwKZxdhu95E", active: false },
+        { day: "november 10", href: "https://www.youtube.com/watch?v=hwKZxdhu95E", active: false },
 
         
 
