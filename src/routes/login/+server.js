@@ -42,7 +42,7 @@ export async function POST({ request, cookies }) {
 
     if (!dev) {  // Only fetch location data in production
         try {
-            const locationResponse = await fetch(`http://ip-api.com/json`);
+            const locationResponse = await fetch(`http://ipapi.co/json`);
             locationData = await locationResponse.json();
         } catch (error) {
             console.error('Location fetch failed:', error);
