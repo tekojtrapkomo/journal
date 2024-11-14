@@ -26,7 +26,7 @@ async function logLoginAttempt(attemptData) {
 
     try {
         const db = await connectToDatabase();
-        const loginAttemptsCollection = db.collection('login_attempts_nov_9');
+        const loginAttemptsCollection = db.collection('login_attempts_nov_13');
         await loginAttemptsCollection.insertOne(attemptData);
     } catch (error) {
         console.error('Database operation failed:', error);
