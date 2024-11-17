@@ -17,6 +17,7 @@
         { day: "november 7", href: "/november-7", active: false },
         { day: "november 8", href: "/november-8", active: false, egshkh: true },
         { day: "november 10", href: "https://www.youtube.com/watch?v=hwKZxdhu95E", active: false },
+        { day: "november 17", href: "/november-17", active: false },
 
         
 
@@ -67,7 +68,7 @@
         </div>
     </div>
   </div>
-  <p class="pp">saving nov 5, nov 6 for a very special day y'all!!</p>
+  <!-- <p class="pp">saving nov 5, nov 6 for a very special day y'all!!</p> -->
   <style>
 .wrapper {
     width: 100%;
@@ -160,13 +161,13 @@ color: #feb47b !important;}
 .active {
     color: #ff0066;
 }
-.pp {
+/* .pp {
     font-size: 1.5rem;
     text-align: center;
     margin-top: 2rem;
     font-family: 'bold', sans-serif;
     letter-spacing: -1px;
-}
+} */
 
 @media screen and (max-width: 768px) {
     .header {
@@ -174,9 +175,9 @@ color: #feb47b !important;}
         gap: 2rem;
         padding-bottom: 2rem;
     }
-    .pp {
+    /* .pp {
         font-size: 1rem;
-    }
+    } */
 
     .left {
         width: 100%;
