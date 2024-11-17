@@ -6,6 +6,7 @@
     onMount(() => {
     userAgent = navigator.userAgent;
   });
+  import Marqueeck from "@arisbh/marqueeck";
 
     async function submitPassword(event) {
         event.preventDefault();
@@ -23,6 +24,13 @@
         }
     }
 </script>
+<Marqueeck 
+	--marqueeck-bg-color="blue" 
+	--marqueeck-text-color="white"
+	--marqueeck-padding-y="0.5rem">
+	11pm est, nov 17th
+	<svelte:fragment slot="separator"></svelte:fragment>
+</Marqueeck>
 <div class="wrap">
     <form on:submit|preventDefault={submitPassword}>
         <input type="password" bind:value={password} placeholder="enter password" required />
