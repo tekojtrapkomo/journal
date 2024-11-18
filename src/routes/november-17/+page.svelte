@@ -52,7 +52,7 @@
 <br>
     i've always wanted to release an full length, cohesive and concept album, now i got the concept and we make it real next year.
 
-rough draft of the first song off the album maybe? (it may or may not make it to album). creds to Engun for raw vocals and crazy ass bass. lmao i didn't know i was recording myself but the breathing in the first part made perfect sense.
+rough draft of the first song off the album maybe? (it may or may not make it to album). creds to Engun for guide for vocals and crazy ass bass. lmao my recording of breathing in the first part made perfect sense.
 
 i feel like i been talking too much since 2014,  let's get into the work now y'all feel me? i remember Adam told us that on the first day of art direction class "The vision without execution is illusion". 
 
