@@ -103,7 +103,9 @@ ok now i'm thinking about creating my own typeface, maybe next summer. something
                 <img src={img7} alt="">
                 see that? why was i like this? why did i carry so much weight back then? and if i was really like this back then, i was going backwards since then. but maybe it all started on 2011 december 20 i really feel like. 
                 what i’ve realized is, my unhappiness is about me being ungrateful ass brat. it came from my expectations. wanting life to happen on my terms, at my speed. but ofc that’s not how it works. life doesn’t actually owe you a map. but ofc i can handle it.
-                <p style="font-size: 2rem">who am i to fix other's problem when i haven't even fixed mine? but good news is, i might have the answer now 😮‍💨</p>
+                <p style="font-size: 2rem">who am i to fix other's problem when i haven't even fixed mine? but good news is, but i just might have the answer now 😮‍💨</p>
+                <p>since all is empty then all is possible right? it's so obvious that this life has no meaning deep down (for humans), so in order to live, is finding the meaningness in this life right. <br>
+                     music is nice, art is beautiful, designing and creating feels so good. but to me it's always has been to love and to be loved. that's the ultimate goal. and i was so bad and sucked at it. got me even thinking last week i don't deserve to be loved, but wtf. all this pain, guilt, shame, regret, self-doubt, pressure, insecurity actually will lead to me becoming a better "lover", a better human being, eventually.</p>
         </div>
     </div>
 
