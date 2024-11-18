@@ -30,8 +30,10 @@
           </div>
           <div class="content">
             Bodohoor l haramsaad uilchih geed bdg bsn odoo bi uneheer saihan ueuudee bodood, chamaig bas az jargaliinhaa tuluu ywj bga gej bodohoor uneheer zurh maani hairaar byalhajinaa. 
-            Chamdaa zunduu hairtai shuu, chamaigaa zunduuuuu changa tewreed duhan deer ni shob hiitel unseed ene udaa chamaigaa jinhneesee ywuullaa, dahij attachment asuudal gargahguee za, hairtai shuu zunduu ihhh amjilt hairaa 🥰  
         </div> 
+        <div class="content">
+            hezee neg udur buh yum zugeer boloh bhaa.
+        </div>
           
           <div class="poem">
                 Чамаас өөр хэн ч намайг
