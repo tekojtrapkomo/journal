@@ -165,8 +165,9 @@ video {
 }
 .title {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 1rem;
+    font-family: 'bold' !important;
+    letter-spacing: -2px;
 }
 .content {
     font-size: 14px;
