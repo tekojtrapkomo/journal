@@ -111,6 +111,7 @@ ok now i'm thinking about creating my own typeface, maybe next summer. something
                         <source src={memories} type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <i>signing off until november 19</i>
                     </div>
 
     </div>
