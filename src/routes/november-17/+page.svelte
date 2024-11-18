@@ -21,9 +21,9 @@
             <div class="title">
                 1. branding: the art of meaning
             </div>
-            <p>alright let’s talk about brand. i found out that everyone’s perception of brand is so different. but i’ve always wondered about it—the ideology behind it.
+            <p>alright let’s talk about brand. i found out that everyone’s perception of brand is so different. but i’ve always wondered about it, the ideology behind it.
 
-                let’s start with the etymology. it’s actually a german word! _brandt_ means fire or burn. so what does that have to do with companies and branding tho? where i’m from, Mongolia, we stamp horses (such beautiful and mystique creatures) and other livestock to recognize and differentiate them from our neighbors livestock. in old Germany or England, they used burn stamps to mark books, barrels of goods, and even tools to show ownership or craftsmanship.
+                let’s start with the etymology. it’s actually a german word called brandt which means fire or burn. so what does that have to do with companies and branding tho? where i’m from, Mongolia, we stamp horses (such beautiful and mystique creatures) and other livestock to recognize and differentiate them from our neighbors livestock. in old Germany or England, they used burn stamps to mark books, barrels of goods, and even tools to show ownership or craftsmanship.
                 
                 <br> <br>so, branding is basically marking or labeling, right? at least on the surface. but if we look at it from a psychological standpoint, it’s the gut feeling you get when you see that label or mark. therefore, branding becomes an art form, it’s all about evoking emotions. just like music, film, or poetry, if it makes you feel something, it’s art! (citing GOAT Paula Scher here)
                 
