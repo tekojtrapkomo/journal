@@ -51,6 +51,7 @@
         display: flex;
         flex-direction: column;
         max-width: 400px;
+        font-family: 'reg', sans-serif;
     }
     input {
         border: none;
@@ -65,6 +66,7 @@
     }
     input:focus {
         outline: none;
+        font-family: 'reg', sans-serif;
     }
     button {
         color: blue;

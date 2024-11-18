@@ -107,7 +107,7 @@ ok now i'm thinking about creating my own typeface, maybe next summer. something
                 <p style="font-size: 2rem">who am i to fix other's problem when i haven't even fixed mine? but good news is, but i just might have the answer now 😮‍💨</p>
                 <p>since all is empty then all is possible right? it's so obvious that this life has no meaning deep down (for humans), so in order to live, is finding the meaningness in this life right. <br>
                      music is nice, art is beautiful, designing and creating feels so good. but to me it's always has been to love and to be loved. that's the ultimate goal. and i was so bad and sucked at it. got me even thinking last week i don't deserve to be loved, but wtf. all this pain, guilt, shame, regret, self-doubt, pressure, insecurity actually will lead to me becoming a better "lover", a better human being, eventually.</p>
-                     <video width="640" height="360" controls poster="/poster.png"><track kind="captions">
+                     <video width="640" height="360" controls poster="/thumb.png"><track kind="captions">
                         <source src={memories} type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
