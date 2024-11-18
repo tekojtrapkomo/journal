@@ -101,9 +101,8 @@ ok now i'm thinking about creating my own typeface, maybe next summer. something
                 i’ve had sooooo much in life. still have soooo much. honestly, i’ve had everything i thought i wanted. but there’s always been this feeling, this fucking shadow of dissatisfaction and unhappiness like nothing was ever enough. i once again found my old ask.fm yesterday. reading it felt like looking at a version of me who was searching so hard for something. it’s wild to think how far i’ve come and how some of those questions still echo today bro. <br> <br>
                 <img src={img6} alt="">
                 <img src={img7} alt="">
-                see that? why was i like this? why did i carry so much weight back then? and if i was really like this back then, i was going backwards since then. but maybe it all started on 2011 december 20 i really feel like. but what i’ve realized is, my unhappiness wasn’t about what i had or didn’t have. it came from my expectations. wanting life to happen on my terms, at my speed. but that’s not how it works. life doesn’t owe you a map. yeah it’s messy,  but
-                
-                what i’ve realized is, my unhappiness wasn’t about what i had or didn’t have. it came from my expectations. wanting life to happen on my terms, at my speed. but i guess now i know that’s not how it works. life doesn’t actually owe you a map. but ofc i can handle it.
+                see that? why was i like this? why did i carry so much weight back then? and if i was really like this back then, i was going backwards since then. but maybe it all started on 2011 december 20 i really feel like. 
+                what i’ve realized is, my unhappiness is about me being ungrateful ass brat. it came from my expectations. wanting life to happen on my terms, at my speed. but ofc that’s not how it works. life doesn’t actually owe you a map. but ofc i can handle it.
                 <p style="font-size: 2rem">who am i to fix other's problem when i haven't even fixed mine? but good news is, i might have the answer now 😮‍💨</p>
         </div>
     </div>
