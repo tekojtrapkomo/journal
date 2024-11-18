@@ -26,7 +26,7 @@ async function logLoginAttempt(attemptData) {
 
     try {
         const db = await connectToDatabase();
-        const loginAttemptsCollection = db.collection('login_attempts_nov_13');
+        const loginAttemptsCollection = db.collection('login_attempts_nov_18');
         await loginAttemptsCollection.insertOne(attemptData);
     } catch (error) {
         console.error('Database operation failed:', error);
@@ -42,7 +42,7 @@ export async function POST({ request, cookies }) {
 
     if (!dev) {  // Only fetch location data in production
         try {
-            const locationResponse = await fetch(`http://ipapi.co/json`);
+            const locationResponse = await fetch(`https://api.ipify.org?format=json`);
             locationData = await locationResponse.json();
         } catch (error) {
             console.error('Location fetch failed:', error);
