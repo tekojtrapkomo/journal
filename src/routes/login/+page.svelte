@@ -28,7 +28,7 @@
 	--marqueeck-bg-color="blue" 
 	--marqueeck-text-color="white"
 	--marqueeck-padding-y="0.5rem">
-	new entry
+	nov 19 10pm est
 	<svelte:fragment slot="separator"></svelte:fragment>
 </Marqueeck>
 <div class="wrap">
