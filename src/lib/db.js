@@ -7,7 +7,7 @@ let db;
 export async function connectToDatabase() {
     if (!db) {
         await client.connect();
-        db = client.db('login'); // replace with your database name
+        db = client.db('login');
     }
     return db;
 }

@@ -6,13 +6,13 @@ export async function handle({ event, resolve }) {
     const { cookies, url } = event;
     const isAuthenticated = cookies.get('authenticated') === 'true';
     if (isAuthenticated && url.pathname === '/login') {
-        throw redirect(302, '/'); // Redirect to home or another page
+        throw redirect(302, '/'); 
     }
-    // Redirect to login if not authenticated and trying to access a restricted page
+    
     if (!isAuthenticated && url.pathname !== '/login') {
         throw redirect(302, '/login');
     }
 
-    // Process the request as usual if authenticated or accessing the login page
+    
     return await resolve(event);
 }
