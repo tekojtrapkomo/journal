@@ -24,13 +24,15 @@
         }
     }
 </script>
-<Marqueeck 
+<div class="marq">
+    <Marqueeck 
 	--marqueeck-bg-color="blue" 
 	--marqueeck-text-color="white"
 	--marqueeck-padding-y="0.5rem">
 	nov 19 10pm est
 	<svelte:fragment slot="separator"></svelte:fragment>
 </Marqueeck>
+</div>
 <div class="wrap">
     <form on:submit|preventDefault={submitPassword}>
         <input type="password" bind:value={password} placeholder="enter password" required />
@@ -41,6 +43,9 @@
 
 
 <style>
+    .marq {
+        font-family: 'reg', sans-serif;
+    }
     .wrap {
         display: flex;
         justify-content: center;
