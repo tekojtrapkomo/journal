@@ -32,7 +32,7 @@
                     <a href="https://lubalin100.com/">more resource</a>
                 </p>
             </div> -->
-            <i>until november 23
+            <i>until tomorrow with a big thing!
                         <br>
                         Sincerely, 
                         Battogtokh

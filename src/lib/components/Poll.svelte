@@ -112,13 +112,13 @@
                 <input
                     type="text"
                     bind:value={newOption}
-                    placeholder="Enter your choice..."
+                    placeholder="add yours"
                     maxlength="50"
                     required
                 />
                 <div class="form-buttons">
                     <button type="submit" disabled={!newOption.trim() || loading}>
-                        Vote
+                        vote
                     </button>
                     <button 
                         type="button" 
@@ -128,7 +128,7 @@
                             newOption = '';
                         }}
                     >
-                        Cancel
+                        cancel
                     </button>
                 </div>
             </form>
@@ -137,7 +137,7 @@
                 class="add-option"
                 on:click={() => showAddForm = true}
             >
-                + Vote for someone else
+                add yours
             </button>
         {/if}
     {:else}
@@ -156,7 +156,7 @@
                 }}
                 disabled={loading}
             >
-                Change Vote
+                change vote
             </button>
         </div>
     {/if}
@@ -177,6 +177,8 @@
     h1 {
         font-size: 1.5rem;
         margin: 0 0 20px;
+        font-family: 'Reg', sans-serif;
+        letter-spacing: -2px;
     }
 
     button {
@@ -185,11 +187,13 @@
         margin: 10px 0;
         padding: 10px;
         font-size: 1rem;
-        font-weight: bold;
         border: 2px solid #111;
         background: #fff;
         cursor: pointer;
         transition: background 0.2s ease-in-out;
+        font-family: 'Reg', sans-serif;
+        letter-spacing: -2px;
+
     }
 
     button:hover {
