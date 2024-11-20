@@ -178,7 +178,6 @@
         font-size: 1.5rem;
         margin: 0 0 20px;
         font-family: 'Reg', sans-serif;
-        letter-spacing: -2px;
     }
 
     button {
@@ -192,8 +191,7 @@
         cursor: pointer;
         transition: background 0.2s ease-in-out;
         font-family: 'Reg', sans-serif;
-        letter-spacing: -2px;
-
+        color: blue;
     }
 
     button:hover {
