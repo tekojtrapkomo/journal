@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import oct30_1 from '$lib/assets/oct30_1.jpeg';
     import oct29_33 from '$lib/assets/oct29_33.jpeg';
     import lovers from '$lib/assets/lovers.jpeg';
@@ -230,4 +230,4 @@
         max-width: 600px;
     }
 }
-</style>
+</style> -->

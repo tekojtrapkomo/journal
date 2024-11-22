@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import Audio from '$lib/components/Audio.svelte';
     import thursdayDemo from '$lib/assets/thursday_demo.mp3';
     import IMG_5481 from '$lib/assets/IMG_5481.jpg';
@@ -144,4 +144,4 @@
         max-width: 600px;
     }
 }
-</style>
+</style> -->
