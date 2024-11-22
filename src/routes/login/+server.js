@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import { connectToDatabase } from '$lib/db';
 import { dev } from '$app/environment';  // Import dev flag from SvelteKit
 
-const PASSWORD_HASH = '$2b$10$WFTaM7eL3ujdR1s40b4nKu.EVGSe/SuvHw6WzI31NJR77a41raenu'; 
+const PASSWORD_HASH = '$2b$10$9DeL7vT8ZgXKT6IRezyFOOXxJIcHjwGDqBhABk4WVQ.tSYJnIlk6m'; 
 
 const getMongoliaTimestamp = () => {
     return new Date().toLocaleString('en-US', {
@@ -26,7 +26,7 @@ async function logLoginAttempt(attemptData) {
 
     try {
         const db = await connectToDatabase();
-        const loginAttemptsCollection = db.collection('login_attempts_nov_19');
+        const loginAttemptsCollection = db.collection('newLoginAttempts');
         await loginAttemptsCollection.insertOne(attemptData);
     } catch (error) {
         console.error('Database operation failed:', error);
