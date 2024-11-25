@@ -5,7 +5,7 @@
     let timerInterval;
     
     function calculateTimeLeft() {
-      const targetDate = new Date('2024-11-27T00:00:00-05:00'); // EST is UTC-5
+      const targetDate = new Date('2024-11-28T00:00:00-05:00'); // EST is UTC-5
       const now = new Date();
       const difference = targetDate - now;
       

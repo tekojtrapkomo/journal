@@ -36,8 +36,9 @@
 
 
     <span>updating UI,UX</span>
-    <Countdown />
     <iframe width="560" height="315" src="https://www.youtube.com/embed/6da5__GEito?si=jxKQc7IoUEyx1hrG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <Countdown />
+
 </div>
 </div>
 
@@ -84,15 +85,19 @@
         letter-spacing: -1px;
     }
     span {
-        font-size: 4rem;
+        font-size: 2rem;
         font-family: 'reg', sans-serif;
         letter-spacing: -1px;
         color: black;
         position: absolute;
         top: 0;
         padding-top: 5rem;
-        left: 50%;
-        transform: translateX(-50%);
+    }
+    .new {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     p {
         font-size: 1rem;
