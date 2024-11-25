@@ -7,6 +7,7 @@
     userAgent = navigator.userAgent;
   });
   import Marqueeck from "@arisbh/marqueeck";
+    import Countdown from "../../lib/components/Countdown.svelte";
 
     async function submitPassword(event) {
         event.preventDefault();
@@ -23,13 +24,21 @@
             message = 'real ones know';
         }
     }
+    
 </script>
 <div class="wrap">
-    <form on:submit|preventDefault={submitPassword}>
+    <!-- <form on:submit|preventDefault={submitPassword}>
         <input type="password" bind:value={password} placeholder="enter password" required />
         <button type="submit">go!</button>
         <p>{message}</p>
-    </form>
+    </form> -->
+    <div class="new">
+
+
+    <span>updating UI,UX</span>
+    <Countdown />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6da5__GEito?si=jxKQc7IoUEyx1hrG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 </div>
 
 
@@ -73,6 +82,17 @@
         text-align: right;
         font-family: 'reg', sans-serif;
         letter-spacing: -1px;
+    }
+    span {
+        font-size: 4rem;
+        font-family: 'reg', sans-serif;
+        letter-spacing: -1px;
+        color: black;
+        position: absolute;
+        top: 0;
+        padding-top: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
     p {
         font-size: 1rem;
