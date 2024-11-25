@@ -103,6 +103,10 @@
         justify-content: center;
         padding-top: 8rem;
     }
+    .new iframe {
+        width: 100%;
+        max-width: 600px;
+    }
     p {
         font-size: 1rem;
         font-family: 'reg', sans-serif;
