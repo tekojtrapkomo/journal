@@ -32,10 +32,11 @@
         <button type="submit">go!</button>
         <p>{message}</p>
     </form> -->
+    <span>planning to drop new journal layout, new projects, new announcement on the first day of december, while waiting here's a favorite song of mine!</span>
+
     <div class="new">
 
 
-    <span>updating UI,UX</span>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/6da5__GEito?si=jxKQc7IoUEyx1hrG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <Countdown />
 
@@ -85,19 +86,22 @@
         letter-spacing: -1px;
     }
     span {
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: 'reg', sans-serif;
         letter-spacing: -1px;
         color: black;
         position: absolute;
         top: 0;
         padding-top: 5rem;
+        max-width: 600px;
+        padding: 5rem 2rem 0rem 2rem;
     }
     .new {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 8rem;
     }
     p {
         font-size: 1rem;
