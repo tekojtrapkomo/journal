@@ -31,7 +31,6 @@
     <div class="timer">
       <div class="time-block">
         <span class="number">{secondsLeft.toLocaleString()}</span>
-        <span class="label">seconds</span>
       </div>
     </div>
   </div>
@@ -58,14 +57,8 @@
     
     .number {
       font-size: 3rem;
-      font-weight: bold;
       color: #333;
+      font-family: 'reg', sans-serif;
     }
     
-    .label {
-      font-size: 1rem;
-      color: #666;
-      text-transform: uppercase;
-      margin-top: 0.5rem;
-    }
   </style>
