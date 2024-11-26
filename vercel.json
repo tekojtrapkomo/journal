@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "https://journal.battogtokh.works",
+        "destination": "https://battogtokh.works",
+        "permanent": true
+      }
+    ]
+  }
+  
