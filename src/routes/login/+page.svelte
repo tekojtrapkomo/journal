@@ -32,7 +32,7 @@
         <button type="submit">go!</button>
         <p>{message}</p>
     </form> -->
-    <span>planning to drop new portfolio, new journal, new announcement. while waiting.. here's a favorite song of mine!</span>
+    <span>planning to drop new portfolio, new journal, new announcement. while waiting.. here's a favorite song of mine!!</span>
 
     <div class="new">
 
