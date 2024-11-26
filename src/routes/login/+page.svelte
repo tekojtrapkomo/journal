@@ -7,8 +7,6 @@
     userAgent = navigator.userAgent;
   });
   import Marqueeck from "@arisbh/marqueeck";
-    import Countdown from "../../lib/components/Countdown.svelte";
-
     async function submitPassword(event) {
         event.preventDefault();
         const res = await fetch('/login', {
@@ -17,30 +15,28 @@
             body: JSON.stringify({ password, userAgent })
         });
         const result = await res.json();
-
         if (result.success) {
             window.location.href = '/';
         } else {
             message = 'real ones know';
         }
     }
-    
 </script>
+<div class="marq">
+    <Marqueeck 
+	--marqueeck-bg-color="blue" 
+	--marqueeck-text-color="white"
+	--marqueeck-padding-y="0.5rem">
+	nov 28 9am est
+	<svelte:fragment slot="separator"></svelte:fragment>
+</Marqueeck>
+</div>
 <div class="wrap">
-    <!-- <form on:submit|preventDefault={submitPassword}>
+    <form on:submit|preventDefault={submitPassword}>
         <input type="password" bind:value={password} placeholder="enter password" required />
         <button type="submit">go!</button>
         <p>{message}</p>
-    </form> -->
-    <span>planning to drop new portfolio, new journal, new announcement. while waiting.. here's a favorite song of mine!!</span>
-
-    <div class="new">
-
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/6da5__GEito?si=jxKQc7IoUEyx1hrG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <Countdown />
-
-</div>
+    </form>
 </div>
 
 
@@ -85,28 +81,6 @@
         font-family: 'reg', sans-serif;
         letter-spacing: -1px;
     }
-    span {
-        font-size: 1.2rem;
-        font-family: 'reg', sans-serif;
-        letter-spacing: -1px;
-        color: black;
-        position: absolute;
-        top: 0;
-        padding-top: 5rem;
-        max-width: 600px;
-        padding: 5rem 2rem 0rem 2rem;
-    }
-    .new {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 8rem;
-    }
-    .new iframe {
-        width: 100%;
-        padding: 0 2rem;
-    }
     p {
         font-size: 1rem;
         font-family: 'reg', sans-serif;
@@ -130,7 +104,6 @@
             display: flex;
             justify-content: flex-end;
             padding-right: 1rem;
-
         }
         p {
             font-size: 0.8rem;

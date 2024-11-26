@@ -4,15 +4,7 @@ import bcrypt from 'bcrypt';
 const PASSWORD_HASH = '$2b$10$WFTaM7eL3ujdR1s40b4nKu.EVGSe/SuvHw6WzI31NJR77a41raenu';
 
 export async function handle({ event, resolve }) {
-    const { cookies, url, request } = event;
-
-    // Get the Host header
-    const host = request.headers.get('host');
-
-    // Redirect `journal.mysite.com` to `mysite.com`
-    if (host === 'journal.battogtokh.works') {
-        throw redirect(302, 'https://battogtokh.works');
-    }
+    const { cookies, url } = event;
 
     // Handle authentication
     const isAuthenticated = cookies.get('authenticated') === 'true';
