@@ -16,7 +16,35 @@ const getMongoliaTimestamp = () => {
         hour12: false
     });
 };
+async function sendPushoverNotification(data) {
+    const message = `
+        Login Attempt:
+        - Success: ${data.success}
+        - Timestamp: ${data.timestampISO}
+        - Location: ${data.location ? JSON.stringify(data.location) : 'N/A'}
+        - User Agent: ${data.userAgent}
+    `;
 
+    try {
+        const response = await fetch('https://api.pushover.net/1/messages.json', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                token: 'aatrp2ctk7gpuv5gpsbxi7x369o82q',
+                user: 'u6xf4twqhootjwmz8phmcu6xdtkvye',
+                message,
+            }),
+        });
+
+        if (!response.ok) {
+            console.error('Pushover notification failed:', await response.text());
+        } else {
+            console.log('Notification sent via Pushover');
+        }
+    } catch (error) {
+        console.error('Error sending Pushover notification:', error);
+    }
+}
 async function logLoginAttempt(attemptData) {
     // Skip DB operations in dev mode
     if (dev) {
@@ -28,11 +56,14 @@ async function logLoginAttempt(attemptData) {
         const db = await connectToDatabase();
         const loginAttemptsCollection = db.collection('newLoginAttempts');
         await loginAttemptsCollection.insertOne(attemptData);
+        await sendPushoverNotification(attemptData);
+
     } catch (error) {
         console.error('Database operation failed:', error);
         // In production, you might want to handle this error differently
     }
 }
+
 
 export async function POST({ request, cookies }) {
     const { password, userAgent } = await request.json();
