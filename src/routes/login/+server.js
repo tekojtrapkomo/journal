@@ -3,6 +3,8 @@ import { connectToDatabase } from '$lib/db';
 import { dev } from '$app/environment';  // Import dev flag from SvelteKit
 
 const PASSWORD_HASH = '$2b$10$nWBLWGs16pR1G0Q.ArA5X.MzrMat4.77f/qzOGUVqQIgDAZmLobxW'; 
+const OLD_PASSWORD_HASH = '$2b$10$zeEIx7wlJhrF31s8MEFV.efcZbhpsX3qqlmhEcL5vKPIMD3F3Uobi'; // Add a hash for the old password
+
 
 const getMongoliaTimestamp = () => {
     return new Date().toLocaleString('en-US', {
@@ -69,6 +71,8 @@ async function logLoginAttempt(attemptData) {
 export async function POST({ request, cookies }) {
     const { password, userAgent } = await request.json();
     const isCorrectPassword = await bcrypt.compare(password, PASSWORD_HASH);
+    const isOldPassword = await bcrypt.compare(password, OLD_PASSWORD_HASH);
+
 
     let locationData = null;
 
@@ -102,9 +106,14 @@ export async function POST({ request, cookies }) {
             JSON.stringify({ success: true, message: 'Login successful!' }), 
             { status: 200 }
         );
+    } else if (isOldPassword) {
+        return new Response(
+            JSON.stringify({ success: false, message: 'Old password detected. Please use the updated password.' }), 
+            { status: 401 }
+        );
     } else {
         return new Response(
-            JSON.stringify({ success: false, message: 'Incorrect password. Try again.' }), 
+            JSON.stringify({ success: false, message: 'real ones know' }), 
             { status: 401 }
         );
     }
