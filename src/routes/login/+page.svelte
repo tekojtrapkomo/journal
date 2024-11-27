@@ -2,7 +2,10 @@
     import { onMount } from "svelte";
     let password = '';
     let message = '';
+    let image = '';
     let userAgent = '';
+    import { fade } from "svelte/transition";
+    import NowPlaying from "$lib/components/NowPlaying.svelte";
     onMount(() => {
     userAgent = navigator.userAgent;
   });
@@ -18,8 +21,14 @@
         if (result.success) {
             window.location.href = '/';
         } else {
-            message = result.message;
+        if (result.image) {
+            image = result.image; 
+            message = '';         
+        } else {
+            message = result.message; 
+            image = '';             
         }
+    }
     }
 </script>
 <div class="marq">
@@ -27,16 +36,23 @@
 	--marqueeck-bg-color="blue" 
 	--marqueeck-text-color="white"
 	--marqueeck-padding-y="0.5rem">
-	nov 27 9am est 🥳
-	<svelte:fragment slot="separator"></svelte:fragment>
+	nov 31 9am est 🥳
 </Marqueeck>
 </div>
 <div class="wrap">
     <form on:submit|preventDefault={submitPassword}>
         <input type="password" bind:value={password} placeholder="enter password" required />
         <button type="submit">go!</button>
-        <p>{message}</p>
+        {#if image}
+            <div transition:fade class="image-container">
+                <img src={image} alt="Mr.Fresh" />
+            </div>
+        {/if}
+        {#if message}
+            <p>{message}</p>
+        {/if}
     </form>
+    
     <div class="hint">
         <a target="_blank" aria-label="hint" href="https://www.youtube.com/watch?v=eNvUS-6PTbs">
             <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,14 +61,23 @@
             <path d="M13.0256 8.41026C13.0256 7.84381 12.5664 7.38462 12 7.38462C11.4336 7.38462 10.9744 7.84381 10.9744 8.41026C10.9744 8.9767 11.4336 9.4359 12 9.4359C12.5664 9.4359 13.0256 8.9767 13.0256 8.41026Z" fill="blue"/>
             </svg></a>
     </div>
+    <div class="spotify">
+        <NowPlaying />
+    </div>
 </div>
 
 
 <style>
     .marq {
         font-family: 'reg', sans-serif;
-        overflow: hidden;
-        width: 100vw;
+        position: fixed;
+    }
+    .spotify {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        z-index: 999999;
     }
     .wrap {
         display: flex;
@@ -98,6 +123,13 @@
         bottom: 0;
         right: 0;
         padding: 1rem;
+    }
+    .image-container{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 2rem;
     }
     p {
         font-size: 1rem;

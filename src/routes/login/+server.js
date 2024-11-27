@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import { connectToDatabase } from '$lib/db';
 import { dev } from '$app/environment';  // Import dev flag from SvelteKit
 
-const PASSWORD_HASH = '$2b$10$nWBLWGs16pR1G0Q.ArA5X.MzrMat4.77f/qzOGUVqQIgDAZmLobxW'; 
+const PASSWORD_HASH = '$2b$10$apApF49Y4D/myXYqqZp5YOt18XSZMTJPzIDCX9A6sA7muW4X0/qha'; 
 const OLD_PASSWORD_HASH = '$2b$10$zeEIx7wlJhrF31s8MEFV.efcZbhpsX3qqlmhEcL5vKPIMD3F3Uobi'; // Add a hash for the old password
 
 
@@ -103,17 +103,17 @@ export async function POST({ request, cookies }) {
             maxAge: 1800 
         });
         return new Response(
-            JSON.stringify({ success: true, message: 'Login successful!' }), 
+            JSON.stringify({ success: true, message: 'YESSIR!' }), 
             { status: 200 }
         );
     } else if (isOldPassword) {
         return new Response(
-            JSON.stringify({ success: false, message: 'Old password detected. Please use the updated password.' }), 
+            JSON.stringify({ success: false, message: 'words have meaning and names have power' }), 
             { status: 401 }
         );
     } else {
         return new Response(
-            JSON.stringify({ success: false, message: 'real ones know' }), 
+            JSON.stringify({ success: false, image: '/mrfresh.png' }), 
             { status: 401 }
         );
     }

@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 
-const plaintextPassword = "aintnobodysbusiness";
+const plaintextPassword = "BATTOGTOKH NYAMDAVAA";
 const saltRounds = 10;
 bcrypt.hash(plaintextPassword, saltRounds)
   .then(hash => {
