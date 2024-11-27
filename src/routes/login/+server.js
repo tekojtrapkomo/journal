@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import { connectToDatabase } from '$lib/db';
 import { dev } from '$app/environment';  // Import dev flag from SvelteKit
 
-const PASSWORD_HASH = '$2b$10$5EvETOoqEKDzbs3v1SwNie/AJQE0vwMJDvd9sXeBwcHv1RmjOI1/m'; 
+const PASSWORD_HASH = '$2b$10$nWBLWGs16pR1G0Q.ArA5X.MzrMat4.77f/qzOGUVqQIgDAZmLobxW'; 
 
 const getMongoliaTimestamp = () => {
     return new Date().toLocaleString('en-US', {
