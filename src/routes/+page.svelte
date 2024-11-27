@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from "svelte";
+
     const dates = [
         { day: "october 20", href: "/october-20", active: false },
         { day: "october 21", href: "/october-21", active: false },
@@ -18,8 +20,10 @@
         { day: "november 8", href: "/november-8", active: false, egshkh: true },
         { day: "november 10", href: "https://www.youtube.com/watch?v=hwKZxdhu95E", active: false },
         { day: "november 17", href: "/november-17", active: false },
-        { day: "november 19", href: "/november-19", active: false }
+        { day: "november 19", href: "/november-19", active: false },
+        { day: "november 26", href: "https://www.youtube.com/watch?v=RJDZBozre1g", active: false }
 
+        
         
 
     ];
@@ -31,7 +35,9 @@
     const column1 = dates.slice(0, itemsPerColumn);
     const column2 = dates.slice(itemsPerColumn, itemsPerColumn * 2);
     const column3 = dates.slice(itemsPerColumn * 2);
-    
+    onMount(() => {
+        alert("how are you guys liking my new portfolio website? yeah, while working on it, I accidentally broke the subdomain server code, all those yada yada stuff, but we got everything’s fixed now and running niiiiice and smooth. well... i fixed it. 😅");
+    });
   </script>
   
   <div class="wrapper">
