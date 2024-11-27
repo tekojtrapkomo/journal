@@ -27,7 +27,7 @@
 	--marqueeck-bg-color="blue" 
 	--marqueeck-text-color="white"
 	--marqueeck-padding-y="0.5rem">
-	nov 28 9am est 🥳
+	nov 27 9am est 🥳
 	<svelte:fragment slot="separator"></svelte:fragment>
 </Marqueeck>
 </div>
