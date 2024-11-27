@@ -42,12 +42,12 @@
     nov 31 9am est 🥳 
 </Marqueeck> -->
 <Marquee>
-	2024 dec 1 -  9am est 🥴 <div class="space"></div>
-    2024 dec 1 -  9am est 🥴 <div class="space"></div>
-    2024 dec 1 -  9am est 🥴 <div class="space"></div>
-    2024 dec 1 -  9am est 🥴 <div class="space"></div>
-	2024 dec 1 -  9am est 🥴 <div class="space"></div>
-	2024 dec 1 -  9am est 🥴 <div class="space"></div>
+	fixed server errors, we back! 🥳 <div class="space"></div>
+    fixed server errors, we back! 🥳 <div class="space"></div>
+    fixed server errors, we back! 🥳 <div class="space"></div>
+    fixed server errors, we back! 🥳 <div class="space"></div>
+	fixed server errors, we back! 🥳 <div class="space"></div>
+	fixed server errors, we back! 🥳 <div class="space"></div>
 
  </Marquee>
 </div>
