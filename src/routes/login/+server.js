@@ -2,8 +2,8 @@ import bcrypt from 'bcrypt';
 import { connectToDatabase } from '$lib/db';
 import { dev } from '$app/environment';  // Import dev flag from SvelteKit
 
-const PASSWORD_HASH = '$2b$10$apApF49Y4D/myXYqqZp5YOt18XSZMTJPzIDCX9A6sA7muW4X0/qha'; 
-const OLD_PASSWORD_HASH = '$2b$10$zeEIx7wlJhrF31s8MEFV.efcZbhpsX3qqlmhEcL5vKPIMD3F3Uobi'; // Add a hash for the old password
+const PASSWORD_HASH = '$2b$10$zeEIx7wlJhrF31s8MEFV.efcZbhpsX3qqlmhEcL5vKPIMD3F3Uobi'; 
+const OLD_PASSWORD_HASH = '$2b$10$zeEIx7wlJhrF31s8MEFV.efcZbhpsX3qqlmhEcL5vKPIMD3h3Uobi'; // Add a hash for the old password
 
 
 const getMongoliaTimestamp = () => {
