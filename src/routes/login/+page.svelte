@@ -18,7 +18,7 @@
         if (result.success) {
             window.location.href = '/';
         } else {
-            message = 'real ones know';
+            message = result.message;
         }
     }
 </script>
