@@ -108,7 +108,7 @@ export async function POST({ request, cookies }) {
         );
     } else if (isOldPassword) {
         return new Response(
-            JSON.stringify({ success: false, message: 'words have meaning and names have power' }), 
+            JSON.stringify({ success: false, message: `words have meaning names have power` }), 
             { status: 401 }
         );
     } else {
