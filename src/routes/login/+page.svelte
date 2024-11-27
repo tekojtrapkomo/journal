@@ -5,7 +5,6 @@
     let image = '';
     let userAgent = '';
     import { fade } from "svelte/transition";
-    import NowPlaying from "$lib/components/NowPlaying.svelte";
     onMount(() => {
     userAgent = navigator.userAgent;
   });
